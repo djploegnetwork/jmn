@@ -565,16 +565,42 @@ footer{background:var(--ink);padding:52px 0 24px;border-top:1px solid rgba(255,2
 </div></div>
 <section class="sec s-surf"><div class="container con-grid">
   <div class="con-form">
-    <h3>Stuur ons een bericht</h3>
-    <p class="sub">We reageren binnen 24 uur op werkdagen.</p>
-    <div class="fg"><label>Naam</label><input type="text" placeholder="Jan de Vries"></div>
-    <div class="fg"><label>E-mailadres</label><input type="email" placeholder="jan@bedrijf.nl"></div>
-    <div class="fg"><label>Bedrijfsnaam</label><input type="text" placeholder="Jouw Bedrijf BV"></div>
-    <div class="fg"><label>Wat kan Webploeg voor je doen?</label><select><option>Nieuwe website laten maken</option><option>Bestaande website verbeteren</option><option>Conversie-optimalisatie</option><option>SEO verbeteren</option><option>Hosting &amp; beheer</option><option>Gratis website scan</option><option>Anders</option></select></div>
-    <div class="fg"><label>Vertel ons meer (optioneel)</label><textarea placeholder="Beschrijf je situatie, wensen of vragen..."></textarea></div>
-    <button class="f-sub" onclick="submitForm()">Stuur aanvraag →</button>
-    <p class="f-note">✓ Geen verplichtingen &nbsp;·&nbsp; ✓ Gratis en vrijblijvend</p>
-    <div class="f-ok" id="formOk">Bedankt! We nemen binnen 24 uur contact met je op.</div>
+    <form action="https://formspree.io/f/mwvanjwz" method="POST">
+
+  <div class="fg">
+    <label>Naam</label>
+    <input type="text" name="naam" placeholder="Jan de Vries" required>
+  </div>
+
+  <div class="fg">
+    <label>E-mailadres</label>
+    <input type="email" name="email" placeholder="jan@bedrijf.nl" required>
+  </div>
+
+  <div class="fg">
+    <label>Bedrijfsnaam</label>
+    <input type="text" name="bedrijf" placeholder="Jouw Bedrijf BV">
+  </div>
+
+  <div class="fg">
+    <label>Wat kan Webploeg voor je doen?</label>
+    <select name="dienst">
+      <option>Nieuwe website laten maken</option>
+      <option>Bestaande website verbeteren</option>
+      <option>Conversie-optimalisatie</option>
+      <option>SEO verbeteren</option>
+      <option>Hosting & beheer</option>
+    </select>
+  </div>
+
+  <div class="fg">
+    <label>Bericht</label>
+    <textarea name="bericht" placeholder="Beschrijf je situatie..." required></textarea>
+  </div>
+
+  <button class="f-sub" type="submit">Stuur aanvraag →</button>
+
+</form>
   </div>
   <div class="con-info">
     <h3>Direct contact</h3>
